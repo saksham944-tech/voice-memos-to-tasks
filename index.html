@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Voice Memos to Tasks</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <h1>🎙️ Voice Memos to Tasks</h1>
+    <button id="themeBtn">☀️ Light Mode</button>
+    <p class="subtitle">
+      Speak your messy thoughts. I will turn them into clean tasks.
+    </p>
+
+    <div class="card">
+      <button id="startBtn">Start Speaking</button>
+      <button id="stopBtn">Stop</button>
+
+      <p id="status">Click start and speak something.</p>
+
+      <textarea id="transcript" placeholder="Your spoken text will appear here..."></textarea>
+
+      <button id="convertBtn">Convert to Tasks</button>
+    </div>
+
+    <div class="card">
+      <h2>✅ Your Tasks</h2>
+
+      <div class="task-stats">
+        <p id="totalTasks">Total: 0</p>
+        <p id="completedTasks">Completed: 0</p>
+        <p id="pendingTasks">Pending: 0</p>
+      </div>
+
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search tasks..." 
+      />
+
+      <div class="filters">
+        <button onclick="setFilter('All')">All</button>
+        <button onclick="setFilter('Study')">Study</button>
+        <button onclick="setFilter('Work')">Work</button>
+        <button onclick="setFilter('Shopping')">Shopping</button>
+        <button onclick="setFilter('Communication')">Communication</button>
+        <button onclick="setFilter('High')">High Priority</button>
+      </div>
+
+      <ul id="taskList"></ul>
+      <button id="downloadBtn">Download Tasks</button>
+      <button id="clearBtn">Clear All Tasks</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
